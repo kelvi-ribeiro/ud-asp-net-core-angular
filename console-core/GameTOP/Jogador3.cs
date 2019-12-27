@@ -6,17 +6,17 @@ namespace GameTOP
   {
     public string Chuta()
     {
-      return "Frnak Ribery Chuta \n";
+      return "Frank Ribery Chuta \n";
     }
 
     public string Corre()
     {
-      return "Frnak Ribery Corre \n";
+      return "Frank Ribery Corre \n";
     }
 
     public string Passa()
     {
-      return "Frnak Ribery Passa \n";
+      return "Frank Ribery Passa \n";
     }
   }
 }
