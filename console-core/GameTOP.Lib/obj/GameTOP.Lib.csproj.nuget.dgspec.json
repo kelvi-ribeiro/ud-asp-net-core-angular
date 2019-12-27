@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP/GameTOP.csproj": {}
+    "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP.Lib/GameTOP.Lib.csproj": {}
   },
   "projects": {
     "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP.Interface/GameTOP.Interface.csproj": {
@@ -110,63 +110,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.100/RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP/GameTOP.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP/GameTOP.csproj",
-        "projectName": "GameTOP",
-        "projectPath": "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP/GameTOP.csproj",
-        "packagesPath": "/home/kelvi-ribeiro/.nuget/packages/",
-        "outputPath": "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/home/kelvi-ribeiro/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "projectReferences": {
-              "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP.Interface/GameTOP.Interface.csproj": {
-                "projectPath": "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP.Interface/GameTOP.Interface.csproj"
-              },
-              "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP.Lib/GameTOP.Lib.csproj": {
-                "projectPath": "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP.Lib/GameTOP.Lib.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
           "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.100/RuntimeIdentifierGraph.json"
         }
       }

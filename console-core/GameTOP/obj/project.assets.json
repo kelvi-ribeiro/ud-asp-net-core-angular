@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "GameTOP.Interface/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/GameTOP.Interface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameTOP.Interface.dll": {}
+        }
+      },
+      "GameTOP.Lib/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "GameTOP.Interface": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GameTOP.Lib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameTOP.Lib.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "GameTOP.Interface/1.0.0": {
+      "type": "project",
+      "path": "../GameTOP.Interface/GameTOP.Interface.csproj",
+      "msbuildProject": "../GameTOP.Interface/GameTOP.Interface.csproj"
+    },
+    "GameTOP.Lib/1.0.0": {
+      "type": "project",
+      "path": "../GameTOP.Lib/GameTOP.Lib.csproj",
+      "msbuildProject": "../GameTOP.Lib/GameTOP.Lib.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "GameTOP.Interface >= 1.0.0",
+      "GameTOP.Lib >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/home/kelvi-ribeiro/.nuget/packages/": {}
@@ -30,7 +68,14 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP.Interface/GameTOP.Interface.csproj": {
+              "projectPath": "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP.Interface/GameTOP.Interface.csproj"
+            },
+            "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP.Lib/GameTOP.Lib.csproj": {
+              "projectPath": "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP.Lib/GameTOP.Lib.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

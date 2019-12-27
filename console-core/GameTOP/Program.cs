@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace GameTOP
+﻿namespace GameTOP
 {
   class Program
   {

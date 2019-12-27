@@ -1,4 +1,4 @@
-namespace GameTOP
+namespace GameTOP.Lib
 {
   public class Jogador2 : iJogador
   {
