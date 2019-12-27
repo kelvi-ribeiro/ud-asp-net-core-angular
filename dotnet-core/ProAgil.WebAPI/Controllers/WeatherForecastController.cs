@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using ProAgil.WebAPI.Model;
 
 namespace ProAgil.WebAPI.Controllers
 {
@@ -24,16 +25,48 @@ namespace ProAgil.WebAPI.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<Evento> Get()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+           return new Evento[] {
+               new Evento() {
+                   EventoId = 1,
+                   Tema = "Angular e .NET Core",
+                   Local = "Belo Horizonte",
+                   Lote = "Primeiro Lote",
+                   QtdPessoas = 250,
+                   DataEvento = DateTime.Now.AddDays(2).ToString("dd/MM/yyyy")
+               },
+               new Evento() {
+                   EventoId = 2,
+                   Tema = "React e Java",
+                   Local = "Rio de Janeiro",
+                   Lote = "Segundo Lote Lote",
+                   QtdPessoas = 200,
+                   DataEvento = DateTime.Now.AddDays(3).ToString("dd/MM/yyyy")
+               }
+           };
+        }
+        [HttpGet("{id}")]
+        public ActionResult<Evento> Get(int id)
+        {
+           return new Evento[] {
+               new Evento() {
+                   EventoId = 1,
+                   Tema = "Angular e .NET Core",
+                   Local = "Belo Horizonte",
+                   Lote = "Primeiro Lote",
+                   QtdPessoas = 250,
+                   DataEvento = DateTime.Now.AddDays(2).ToString("dd/MM/yyyy")
+               },
+               new Evento() {
+                   EventoId = 2,
+                   Tema = "React e Java",
+                   Local = "Rio de Janeiro",
+                   Lote = "Segundo Lote Lote",
+                   QtdPessoas = 200,
+                   DataEvento = DateTime.Now.AddDays(3).ToString("dd/MM/yyyy")
+               }
+           }.FirstOrDefault(x => x.EventoId == id);
         }
     }
 }
