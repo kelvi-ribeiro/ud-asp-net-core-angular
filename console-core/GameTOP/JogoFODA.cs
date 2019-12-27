@@ -7,12 +7,15 @@ namespace GameTOP
   {
     private readonly iJogador _jogador1;
     private readonly iJogador _jogador2;
+    private readonly iJogador _jogador3;
 
-    public JogoFODA(iJogador jogador1, iJogador jogador2)
+    public JogoFODA(iJogador jogador1, iJogador jogador2, iJogador jogador3)
     {
       _jogador1 = jogador1;
 
       _jogador2 = jogador2;
+
+      _jogador3 = jogador3;
     }
     public void IniciarJogo()
     {
@@ -26,6 +29,13 @@ namespace GameTOP
       Console.Write(_jogador2.Corre());
       Console.Write(_jogador2.Chuta());
       Console.Write(_jogador2.Passa());
+
+
+      Console.Write("\n \n PRÓXIMO JOGADOR \n \n");
+
+      Console.Write(_jogador3.Corre());
+      Console.Write(_jogador3.Chuta());
+      Console.Write(_jogador3.Passa());
     }
   }
 }
