@@ -9,3 +9,8 @@
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP/obj/Debug/netcoreapp3.1/GameTOP.AssemblyInfo.cs
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP/obj/Debug/netcoreapp3.1/GameTOP.dll
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP/obj/Debug/netcoreapp3.1/GameTOP.pdb
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP/bin/Debug/netcoreapp3.1/GameTOP.Interface.dll
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP/bin/Debug/netcoreapp3.1/GameTOP.Lib.dll
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP/bin/Debug/netcoreapp3.1/GameTOP.Lib.pdb
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP/bin/Debug/netcoreapp3.1/GameTOP.Interface.pdb
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/console-core/GameTOP/obj/Debug/netcoreapp3.1/GameTOP.csproj.CopyComplete

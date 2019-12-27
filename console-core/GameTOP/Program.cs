@@ -1,4 +1,6 @@
-﻿namespace GameTOP
+﻿using GameTOP.Lib;
+
+namespace GameTOP
 {
   class Program
   {
