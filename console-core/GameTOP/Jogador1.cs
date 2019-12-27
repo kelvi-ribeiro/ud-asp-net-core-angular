@@ -2,7 +2,7 @@ using System;
 
 namespace GameTOP
 {
-    public class Jogador1
+    public class Jogador1 : iJogador
   {
     public Jogador1(string nome)
     {
