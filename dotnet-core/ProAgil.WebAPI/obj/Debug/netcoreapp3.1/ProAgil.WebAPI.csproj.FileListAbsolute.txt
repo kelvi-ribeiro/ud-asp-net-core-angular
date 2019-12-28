@@ -25,11 +25,8 @@
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Sqlite.dll
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyModel.dll
-/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
-/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/SQLitePCLRaw.batteries_green.dll
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/SQLitePCLRaw.batteries_v2.dll
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/SQLitePCLRaw.core.dll
-/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/SQLitePCLRaw.provider.e_sqlite3.dll
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/System.ComponentModel.Annotations.dll
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
@@ -43,5 +40,10 @@
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/runtimes/osx-x64/native/libe_sqlite3.dylib
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/e_sqlite3.dll
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/e_sqlite3.dll
-/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/runtimes/win8-arm/native/e_sqlite3.dll
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/obj/Debug/netcoreapp3.1/ProAgil.WebAPI.csproj.CopyComplete
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/SQLitePCLRaw.nativelibrary.dll
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/SQLitePCLRaw.provider.dynamic_cdecl.dll
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/System.Text.Json.dll
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/runtimes/win-arm/native/e_sqlite3.dll
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/e_sqlite3.dll
