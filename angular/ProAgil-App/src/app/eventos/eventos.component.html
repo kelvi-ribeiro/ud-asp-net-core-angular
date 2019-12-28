@@ -11,20 +11,33 @@
       <th>#</th>
       <th>Tema</th>
       <th>Local</th>
-      <th>Data</th>      
+      <th>Data</th>
       <th>Qtd de Pessoas</th>
       <th>Lote</th>
       <th>Opções</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody *ngIf="eventos && eventos.length">
     <tr *ngFor="let evento of eventos">
       <td>{{evento.eventoId}}</td>
       <td>{{evento.tema}}</td>
       <td>{{evento.local}}</td>
       <td>{{evento.dataEvento}}</td>
-      <td>{{evento.qtdPessoas}}</td>      
-      <td>{{evento.lote}}</td>      
+      <td>{{evento.qtdPessoas}}</td>
+      <td>{{evento.lote}}</td>
+      <td>
+        <button class="btn btn-success"></button>        
+        <button class="btn btn-danger"></button>
+      </td>
     </tr>
   </tbody>
+  <tfoot *ngIf="!eventos.length">
+    <tr>
+      <td colspan="7" class="text-center">
+        <h4>
+          Nenhum Evento encontrado!
+        </h4>
+      </td>
+    </tr>
+  </tfoot>
 </table>
