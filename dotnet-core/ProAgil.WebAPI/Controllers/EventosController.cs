@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Http;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using ProAgil.WebAPI.Data;
@@ -16,11 +16,25 @@ namespace ProAgil.WebAPI.Controllers
       _context = context;
     }
     
+
     [HttpGet]
-    public IEnumerable<Evento> Get()
+    public IActionResult Get()
     {
-      /* return _context.Eventos.ToList();Funciona de qualquer jeito */
-      return _context.Eventos;
+      try
+      {
+        var results = _context.Eventos.ToList();
+        return Ok(results);
+      }
+      catch (System.Exception)
+      {
+
+        return this
+        .StatusCode(
+          StatusCodes.Status500InternalServerError, 
+          "Banco de Dados Falhou"
+          );
+      }
+
     }
     [HttpGet("{id}")]
     public ActionResult<Evento> Get(int id)
