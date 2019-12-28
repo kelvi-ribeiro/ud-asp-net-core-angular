@@ -1148,11 +1148,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/ProAgil.WebAPI.csproj",
+      "projectUniqueName": "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.WebAPI/ProAgil.WebAPI.csproj",
       "projectName": "ProAgil.WebAPI",
-      "projectPath": "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/ProAgil.WebAPI.csproj",
+      "projectPath": "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.WebAPI/ProAgil.WebAPI.csproj",
       "packagesPath": "/home/kelvi-ribeiro/.nuget/packages/",
-      "outputPath": "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet-core/ProAgil.WebAPI/obj/",
+      "outputPath": "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.WebAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/kelvi-ribeiro/.nuget/NuGet/NuGet.Config"
