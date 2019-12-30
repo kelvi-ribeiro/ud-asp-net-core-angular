@@ -4,11 +4,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using ProAgil;
 
 namespace ProAgil.Repository.Migrations
 {
     [DbContext(typeof(ProAgilContext))]
-    [Migration("20191230043437_init")]
+    [Migration("20191230060754_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -162,13 +163,13 @@ namespace ProAgil.Repository.Migrations
 
             modelBuilder.Entity("ProAgil.Domain.PalestranteEvento", b =>
                 {
-                    b.HasOne("ProAgil.Domain.Evento", null)
+                    b.HasOne("ProAgil.Domain.Evento", "Evento")
                         .WithMany("PalestrantesEventos")
                         .HasForeignKey("EventoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ProAgil.Domain.Palestrante", null)
+                    b.HasOne("ProAgil.Domain.Palestrante", "Palestrante")
                         .WithMany("PalestrantesEventos")
                         .HasForeignKey("PalestranteId")
                         .OnDelete(DeleteBehavior.Cascade)
