@@ -96,3 +96,7 @@
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.WebAPI/obj/Debug/netcoreapp3.1/ProAgil.WebAPI.csproj.CopyComplete
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.WebAPI/obj/Debug/netcoreapp3.1/ProAgil.WebAPI.dll
 /home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.WebAPI/obj/Debug/netcoreapp3.1/ProAgil.WebAPI.pdb
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/ProAgil.Domain.dll
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/ProAgil.Repository.dll
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/ProAgil.Domain.pdb
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.WebAPI/bin/Debug/netcoreapp3.1/ProAgil.Repository.pdb

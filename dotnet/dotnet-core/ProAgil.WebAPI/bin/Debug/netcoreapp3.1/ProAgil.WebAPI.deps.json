@@ -27,6 +27,8 @@
           "Microsoft.EntityFrameworkCore": "3.1.0",
           "Microsoft.EntityFrameworkCore.Design": "3.1.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.0",
+          "ProAgil.Domain": "1.0.0",
+          "ProAgil.Repository": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -668,6 +670,28 @@
         },
         "compile": {
           "lib/netcoreapp3.0/System.Text.Json.dll": {}
+        }
+      },
+      "ProAgil.Domain/1.0.0": {
+        "runtime": {
+          "ProAgil.Domain.dll": {}
+        },
+        "compile": {
+          "ProAgil.Domain.dll": {}
+        }
+      },
+      "ProAgil.Repository/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.0",
+          "Microsoft.EntityFrameworkCore.Design": "3.1.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "3.1.0",
+          "ProAgil.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ProAgil.Repository.dll": {}
+        },
+        "compile": {
+          "ProAgil.Repository.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -2576,6 +2600,16 @@
       "sha512": "sha512-IPq/x/d5nAcnD3vIyM3AbPOaTgcqrh0AqPSx7U53UFu3M6k1TH1u/eXc9/h4jm/3mpP1WRUpevlPY4PACd7AWw==",
       "path": "system.text.json/4.7.0",
       "hashPath": "system.text.json.4.7.0.nupkg.sha512"
+    },
+    "ProAgil.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProAgil.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",

@@ -1,0 +1,8 @@
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.Domain/bin/Debug/netstandard2.0/ProAgil.Domain.deps.json
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.Domain/bin/Debug/netstandard2.0/ProAgil.Domain.dll
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.Domain/bin/Debug/netstandard2.0/ProAgil.Domain.pdb
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.Domain/obj/Debug/netstandard2.0/ProAgil.Domain.csprojAssemblyReference.cache
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.Domain/obj/Debug/netstandard2.0/ProAgil.Domain.AssemblyInfoInputs.cache
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.Domain/obj/Debug/netstandard2.0/ProAgil.Domain.AssemblyInfo.cs
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.Domain/obj/Debug/netstandard2.0/ProAgil.Domain.dll
+/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.Domain/obj/Debug/netstandard2.0/ProAgil.Domain.pdb
