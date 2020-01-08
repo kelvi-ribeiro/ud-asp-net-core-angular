@@ -7,12 +7,14 @@ import { EventosComponent } from './eventos/eventos.component';
 
 import { HttpClientModule } from '@angular/common/http'
 import { NavComponent } from './nav/nav.component';
+import { DateTimeFormatTimePipe } from './helps/DateTimeFormatTime.pipe';
 
 @NgModule({
    declarations: [
       AppComponent,
       EventosComponent,
-      NavComponent
+      NavComponent,
+      DateTimeFormatTimePipe
    ],
    imports: [
       BrowserModule,
