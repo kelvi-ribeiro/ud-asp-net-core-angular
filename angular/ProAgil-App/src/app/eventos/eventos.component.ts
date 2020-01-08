@@ -1,7 +1,6 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { EventoService } from '../services/evento.service';
 import { Evento } from '../models/Evento';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap';
 import { FormGroup, Validators, FormBuilder, } from '@angular/forms';
 import { defineLocale, BsLocaleService, ptBrLocale } from "ngx-bootstrap";
 defineLocale('pt-br', ptBrLocale)
@@ -12,21 +11,21 @@ defineLocale('pt-br', ptBrLocale)
   styleUrls: ['./eventos.component.css']
 })
 export class EventosComponent implements OnInit {
+  evento: Evento
   eventosFiltrados: Evento[]
   eventos: Evento[]
   imagemLargura = 50
   imagemMargem = 2
-  mostrarImagem = false  
+  mostrarImagem = false
   registerForm: FormGroup
 
   constructor(
-    private eventoService: EventoService,
-    private modalService: BsModalService,
+    private eventoService: EventoService,    
     private fb: FormBuilder,
-    private localeService:BsLocaleService
+    private localeService: BsLocaleService
   ) {
     this.localeService.use('pt-br')
-   }
+  }
 
   _filtroLista: string
   get filtroLista() {
@@ -40,6 +39,7 @@ export class EventosComponent implements OnInit {
 
 
   openModal(template: any) {
+    this.registerForm.reset()
     template.show()
   }
 
@@ -52,8 +52,19 @@ export class EventosComponent implements OnInit {
     this.mostrarImagem = !this.mostrarImagem
   }
 
-  salvarAlteracao() {
-
+  salvarAlteracao(template: any) {
+    if (this.registerForm.valid) {
+      this.evento = Object.assign({}, this.registerForm.value)
+      this.eventoService.postEvento(this.evento).subscribe(
+        (novoEvento:Evento) => {
+          console.log(novoEvento);
+          template.hide()
+          this.getEventos()          
+        }, error => {
+          console.log(error);          
+        }
+      )
+    }
   }
 
   validation() {
