@@ -2,7 +2,9 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 import { EventoService } from '../services/evento.service';
 import { Evento } from '../models/Evento';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap';
-import { FormGroup, FormControl, Validators, FormBuilder, } from '@angular/forms';
+import { FormGroup, Validators, FormBuilder, } from '@angular/forms';
+import { defineLocale, BsLocaleService, ptBrLocale } from "ngx-bootstrap";
+defineLocale('pt-br', ptBrLocale)
 
 @Component({
   selector: 'app-eventos',
@@ -21,8 +23,11 @@ export class EventosComponent implements OnInit {
   constructor(
     private eventoService: EventoService,
     private modalService: BsModalService,
-    private fb: FormBuilder
-  ) { }
+    private fb: FormBuilder,
+    private localeService:BsLocaleService
+  ) {
+    this.localeService.use('pt-br')
+   }
 
   _filtroLista: string
   get filtroLista() {

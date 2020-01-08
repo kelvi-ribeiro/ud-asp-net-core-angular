@@ -108,7 +108,9 @@
     </div>
     <div class="form-group col-md-4">
       <label>Data e Hora</label>
-      <input type="text" class="form-control"
+      <input type="text" class="form-control" 
+        bsDatepicker
+        [bsConfig]="{dateInputFormat:'DD/mm/YYYY hh:mm a'}"
         [ngClass]="{'is-invalid' : registerForm.get('dataEvento').errors && registerForm.get('dataEvento').touched}"
         formControlName="dataEvento">
       <div class="invalid-feedback">
@@ -124,10 +126,10 @@
         formControlName="qtdPessoas">
       <div *ngIf="registerForm.get('qtdPessoas').hasError('required')" class="invalid-feedback">
         Quantidade de pessoas é obrigatório
-      </div>      
+      </div>
       <div *ngIf="registerForm.get('qtdPessoas').hasError('max')" class="invalid-feedback">
         O limite da quantidade de pessoas é de 120000
-      </div>      
+      </div>
     </div>
     <div class="form-group col-md-9">
       <label>Imagem</label>
