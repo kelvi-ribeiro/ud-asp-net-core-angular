@@ -10,8 +10,7 @@ export interface Evento {
   tema: string
   qtdPessoas: number
   telefone: string
-  email: string
-  lote: string
+  email: string  
   lotes: Lote[]
   redeSociais: RedeSocial[]
   palestrantesEventos: Palestrante[]
