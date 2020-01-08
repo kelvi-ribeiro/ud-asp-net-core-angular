@@ -16,8 +16,7 @@ export class EventosComponent implements OnInit {
   eventos: Evento[]
   imagemLargura = 50
   imagemMargem = 2
-  mostrarImagem = false
-  modalRef: BsModalRef
+  mostrarImagem = false  
   registerForm: FormGroup
 
   constructor(
@@ -40,8 +39,8 @@ export class EventosComponent implements OnInit {
   }
 
 
-  openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template)
+  openModal(template: any) {
+    template.show()
   }
 
   ngOnInit() {
