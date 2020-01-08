@@ -121,7 +121,7 @@
       <label>Qtd Pessoas</label>
       <input type="text" class="form-control"
         [ngClass]="{'is-invalid' : registerForm.get('qtdPessoas').errors && registerForm.get('qtdPessoas').touched}"
-        formControlName="qtdPesoas">
+        formControlName="qtdPessoas">
       <div *ngIf="registerForm.get('qtdPessoas').hasError('required')" class="invalid-feedback">
         Quantidade de pessoas é obrigatório
       </div>      
@@ -167,8 +167,10 @@
 <button class="btn btn-secondary" (click)="openModal(template)">
   Fechar
 </button>
-<button class="btn btn-primary" (click)="salvarAlteracao()">
+<button class="btn btn-primary" [disabled]="!registerForm.valid" (click)="salvarAlteracao()">
   Salvar Alterações
 </button>
 <br>
 <br>
+<p>FormValue: {{registerForm.value | json}}</p>
+<p>Form Status: {{registerForm.status | json}}</p>
