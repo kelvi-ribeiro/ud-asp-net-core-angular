@@ -13,6 +13,9 @@
         "packagesPath": "/home/kelvi-ribeiro/.nuget/packages/",
         "outputPath": "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.Domain/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "/home/kelvi-ribeiro/.nuget/NuGet/NuGet.Config"
         ],

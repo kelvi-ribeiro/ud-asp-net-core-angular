@@ -12,6 +12,7 @@ defineLocale('pt-br', ptBrLocale)
 })
 export class EventosComponent implements OnInit {
   evento: Evento
+  metodoSalvar = 'postEvento'
   eventosFiltrados: Evento[]
   eventos: Evento[]
   imagemLargura = 50
@@ -20,7 +21,7 @@ export class EventosComponent implements OnInit {
   registerForm: FormGroup
 
   constructor(
-    private eventoService: EventoService,    
+    private eventoService: EventoService,
     private fb: FormBuilder,
     private localeService: BsLocaleService
   ) {
@@ -37,6 +38,17 @@ export class EventosComponent implements OnInit {
       this.filtrarEventos(this.filtroLista) : this.eventos
   }
 
+  novoEvento(template: any) {
+    this.metodoSalvar = 'postEvento'
+    this.openModal(template)
+  }
+
+  editarEvento(evento: Evento, template: any) {
+    this.metodoSalvar = 'putEvento'
+    this.openModal(template)
+    this.evento = evento
+    this.registerForm.patchValue(evento)
+  }
 
   openModal(template: any) {
     this.registerForm.reset()
@@ -54,14 +66,13 @@ export class EventosComponent implements OnInit {
 
   salvarAlteracao(template: any) {
     if (this.registerForm.valid) {
-      this.evento = Object.assign({}, this.registerForm.value)
-      this.eventoService.postEvento(this.evento).subscribe(
-        (novoEvento:Evento) => {
-          console.log(novoEvento);
+      this.evento = Object.assign(this.evento.id ? { id: this.evento.id } : {}, this.registerForm.value)
+      this.eventoService[this.metodoSalvar](this.evento).subscribe(
+        () => {
           template.hide()
-          this.getEventos()          
+          this.getEventos()
         }, error => {
-          console.log(error);          
+          console.log(error);
         }
       )
     }

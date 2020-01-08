@@ -91,7 +91,7 @@ namespace ProAgil.WebAPI.Controllers
       }
       return BadRequest();
     }
-    [HttpPut]
+    [HttpPut("{EventoId}")]
     public async Task<IActionResult> Put(int EventoId, Evento model)
     {
       try

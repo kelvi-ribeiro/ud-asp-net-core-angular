@@ -1561,7 +1561,8 @@
     ]
   },
   "packageFolders": {
-    "/home/kelvi-ribeiro/.nuget/packages/": {}
+    "/home/kelvi-ribeiro/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -1572,6 +1573,9 @@
       "packagesPath": "/home/kelvi-ribeiro/.nuget/packages/",
       "outputPath": "/home/kelvi-ribeiro/Learning/Cursos Udemy/ud-asp-net-core-angular/dotnet/dotnet-core/ProAgil.Repository/obj/",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "/home/kelvi-ribeiro/.nuget/NuGet/NuGet.Config"
       ],
