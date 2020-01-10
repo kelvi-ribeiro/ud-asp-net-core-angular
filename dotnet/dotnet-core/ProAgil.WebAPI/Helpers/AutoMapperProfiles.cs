@@ -14,7 +14,7 @@ namespace ProAgil.WebAPI.Helpers
           {
             opt.MapFrom(src => src.PalestrantesEventos.Select(x => x.Palestrante).ToList());
           }).ReverseMap();      
-
+      
       CreateMap<Palestrante, PalestranteDto>()
         .ForMember(dest => dest.Eventos, opt =>
         {
