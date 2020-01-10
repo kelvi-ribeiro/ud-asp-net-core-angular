@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -29,6 +30,7 @@ namespace ProAgil.WebAPI
       services.AddScoped<IProAgilRepository, ProAgilRepository>();
       services.AddControllers();
       services.AddCors();
+      services.AddAutoMapper();
       services.AddMvc(option => option.EnableEndpointRouting = false)
         .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
         .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
