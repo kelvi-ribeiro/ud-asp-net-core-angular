@@ -71,7 +71,10 @@ export class EventosComponent implements OnInit {
 
   salvarAlteracao(template: any) {
     if (this.registerForm.valid) {
-      this.evento = Object.assign(this.evento.id ? { id: this.evento.id } : {}, this.registerForm.value)
+      this.evento = Object.assign(this.evento && this.evento.id ? { id: this.evento.id } : {}, this.registerForm.value)
+      this.eventoService.postUpload(this.file).subscribe()
+      const nomeArquivo = this.evento.imagemURL.split('\\', 3)
+      this.evento.imagemURL = nomeArquivo[2]
       this.eventoService[this.metodoSalvar](this.evento).subscribe(
         () => {
           template.hide()
@@ -84,12 +87,10 @@ export class EventosComponent implements OnInit {
     }
   }
 
-  onFileChange(event){
-    const reader = new FileReader()
-    if(event.target.files && event.target.files.length){
-      this.file = event.target.files
-      console.log(this.file);      
-    }    
+  onFileChange(event) {    
+    if (event.target.files && event.target.files.length) {
+      this.file = event.target.files      
+    }
   }
 
   excluirEvento(evento: Evento, template: any) {
@@ -97,16 +98,16 @@ export class EventosComponent implements OnInit {
     this.evento = evento;
     this.bodyDeletarEvento = `Tem certeza que deseja excluir o Evento: ${evento.tema}, Código: ${evento.tema}`;
   }
-  
+
   confirmeDelete(template: any) {
     this.eventoService.deleteEvento(this.evento.id).subscribe(
       () => {
-          template.hide();
-          this.toastr.success('Deletado com sucesso');
-          this.getEventos();
-        }, error => {
-          this.toastr.error('Erro ao tentar deletar');
-        }
+        template.hide();
+        this.toastr.success('Deletado com sucesso');
+        this.getEventos();
+      }, error => {
+        this.toastr.error('Erro ao tentar deletar');
+      }
     );
   }
 
