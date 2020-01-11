@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.IO;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
@@ -77,6 +79,36 @@ namespace ProAgil.WebAPI.Controllers
           );
       }
     }
+    [HttpPost("upload")]
+    public async Task<IActionResult> Upload(int EventoId)
+    {
+      try
+      {
+        var file = Request.Form.Files[0];
+        var folderName = Path.Combine("Resources", "images");
+        var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
+        if (file.Length > 0)
+        {
+          var filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName;
+          var fullPath = Path.Combine(pathToSave, filename.Replace("\""," ").Trim());
+          using(var stream = new FileStream(fullPath, FileMode.Create))
+          {
+            file.CopyTo(stream);
+          }
+        }
+        return Ok();
+      }
+      catch (System.Exception)
+      {
+
+        return this
+        .StatusCode(
+          StatusCodes.Status500InternalServerError,
+          "Banco de Dados Falhou"
+          );
+      }
+      return BadRequest("Erro ao tentar realizar upload");
+    }
     [HttpPost]
     public async Task<IActionResult> Post(EventoDto eventoDto)
     {
@@ -107,7 +139,7 @@ namespace ProAgil.WebAPI.Controllers
       {
         model.Id = EventoId;
         var evento = await _repo.GetEventoAsyncById(EventoId, false);
-        
+
         if (evento == null) return NotFound();
 
         _mapper.Map(model, evento);
@@ -143,7 +175,7 @@ namespace ProAgil.WebAPI.Controllers
       }
       catch (System.Exception)
       {
-        
+
 
         return this
         .StatusCode(
