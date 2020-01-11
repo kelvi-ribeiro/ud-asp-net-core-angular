@@ -83,6 +83,10 @@ export class EventosComponent implements OnInit {
     }
   }
 
+  onFileChange(event){
+    console.log(event);    
+  }
+
   excluirEvento(evento: Evento, template: any) {
     this.openModal(template);
     this.evento = evento;
