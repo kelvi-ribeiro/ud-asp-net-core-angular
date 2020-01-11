@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using ProAgil.Domain.Identity;
+using ProAgil.WebAPI.DTOs;
 
 namespace ProAgil.WebAPI.Controllers
 {
@@ -31,6 +32,12 @@ namespace ProAgil.WebAPI.Controllers
 
     [HttpGet("GetUser")]
     public async Task<IActionResult> GetUser()
+    {
+        return Ok(new User());
+    }
+
+     [HttpPost("Register")]
+    public async Task<IActionResult> Register(UserDto user)
     {
         return Ok(new User());
     }
