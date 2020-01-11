@@ -22,6 +22,7 @@ export class EventosComponent implements OnInit {
   imagemMargem = 2
   mostrarImagem = false
   registerForm: FormGroup
+  file: File
 
   constructor(
     private eventoService: EventoService,
@@ -84,7 +85,11 @@ export class EventosComponent implements OnInit {
   }
 
   onFileChange(event){
-    console.log(event);    
+    const reader = new FileReader()
+    if(event.target.files && event.target.files.length){
+      this.file = event.target.files
+      console.log(this.file);      
+    }    
   }
 
   excluirEvento(evento: Evento, template: any) {
