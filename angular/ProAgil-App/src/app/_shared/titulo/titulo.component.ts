@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-titulo',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TituloComponent implements OnInit {
 
-  title = 'ProAgil Eventos';
+  @Input() titulo : string
 
   constructor() { }
 

@@ -13,6 +13,7 @@ defineLocale('pt-br', ptBrLocale)
 })
 export class EventosComponent implements OnInit {
   evento: Evento
+  titulo = 'Eventos'
   bodyDeletarEvento = ''
   metodoSalvar = 'postEvento'
   eventosFiltrados: Evento[]
