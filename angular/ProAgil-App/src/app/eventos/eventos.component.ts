@@ -141,7 +141,7 @@ export class EventosComponent implements OnInit {
       .subscribe((_eventos: Evento[]) => {
         this.eventos = _eventos
       }, error => {
-        console.log(error);
+        this.toastr.error(error)
       })
   }
 }
