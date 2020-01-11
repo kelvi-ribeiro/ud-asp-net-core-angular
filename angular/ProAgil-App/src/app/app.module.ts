@@ -10,6 +10,9 @@ import { BsDropdownModule, TooltipModule, ModalModule, BsDatepickerModule, } fro
 import { EventosComponent } from './eventos/eventos.component';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
+import { PalestrantesComponent } from './palestrantes/palestrantes.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ContatosComponent } from './contatos/contatos.component';
 
 
 import { DateTimeFormatTimePipe } from './helps/DateTimeFormatTime.pipe';
@@ -19,12 +22,15 @@ import { DateTimeFormatTimePipe } from './helps/DateTimeFormatTime.pipe';
       AppComponent,
       EventosComponent,
       NavComponent,
-      DateTimeFormatTimePipe
+      DateTimeFormatTimePipe,
+      PalestrantesComponent,
+      DashboardComponent,
+      ContatosComponent
    ],
    imports: [
-      BrowserModule,  
-      BrowserAnimationsModule, 
-      ToastrModule.forRoot(),   
+      BrowserModule,
+      BrowserAnimationsModule,
+      ToastrModule.forRoot(),
       BsDatepickerModule.forRoot(),
       BsDropdownModule.forRoot(),
       TooltipModule.forRoot(),
