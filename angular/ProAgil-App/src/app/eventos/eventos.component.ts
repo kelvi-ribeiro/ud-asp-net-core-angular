@@ -52,6 +52,7 @@ export class EventosComponent implements OnInit {
     this.metodoSalvar = 'putEvento'
     this.openModal(template)
     this.evento = evento
+    evento.imagemURL = ''
     this.registerForm.patchValue(evento)
   }
 
