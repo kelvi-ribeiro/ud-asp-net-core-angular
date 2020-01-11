@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 import { BsDropdownModule, TooltipModule, ModalModule, BsDatepickerModule, } from "ngx-bootstrap";
 
 import { EventosComponent } from './eventos/eventos.component';
@@ -22,7 +23,8 @@ import { DateTimeFormatTimePipe } from './helps/DateTimeFormatTime.pipe';
    ],
    imports: [
       BrowserModule,  
-      BrowserAnimationsModule,    
+      BrowserAnimationsModule, 
+      ToastrModule.forRoot(),   
       BsDatepickerModule.forRoot(),
       BsDropdownModule.forRoot(),
       TooltipModule.forRoot(),
