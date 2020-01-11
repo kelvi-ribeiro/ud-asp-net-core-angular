@@ -51,9 +51,9 @@ export class EventosComponent implements OnInit {
   editarEvento(evento: Evento, template: any) {
     this.metodoSalvar = 'putEvento'
     this.openModal(template)
-    this.evento = evento
-    evento.imagemURL = ''
-    this.registerForm.patchValue(evento)
+    this.evento = { ...evento }
+    this.evento.imagemURL = ''
+    this.registerForm.patchValue(this.evento)
   }
 
   openModal(template: any) {
@@ -88,9 +88,9 @@ export class EventosComponent implements OnInit {
     }
   }
 
-  onFileChange(event) {    
+  onFileChange(event) {
     if (event.target.files && event.target.files.length) {
-      this.file = event.target.files      
+      this.file = event.target.files
     }
   }
 
