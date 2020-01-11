@@ -6,12 +6,9 @@ using ProAgil.Domain.Identity;
 
 namespace ProAgil
 {
-  public class ProAgilContext : IdentityDbContext<User, Role, int,
-                                                        IdentityUserClaim<int>,
-                                                        UserRole,
-                                                        IdentityUserLogin<int>,
-                                                        IdentityRoleClaim<int>,
-                                                        IdentityUserToken<int>>
+    public class ProAgilContext : IdentityDbContext<User, Role, int,
+                                                    IdentityUserClaim<int>, UserRole, IdentityUserLogin<int>,
+                                                    IdentityRoleClaim<int>, IdentityUserToken<int>>
 
   {
     public ProAgilContext(DbContextOptions<ProAgilContext> options) : base(options) { }
@@ -25,23 +22,25 @@ namespace ProAgil
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
       base.OnModelCreating(modelBuilder);
+
       modelBuilder.Entity<UserRole>(userRole =>
-      {
-        userRole.HasKey(usr => new { usr.UserId, usr.RoleId });
-        userRole.HasOne(usr => usr.Role)
-          .WithMany(r => r.UserRoles)
-          .HasForeignKey(ur => ur.RoleId)
-          .IsRequired();
+          {
+            userRole.HasKey(ur => new { ur.UserId, ur.RoleId });
 
+            userRole.HasOne(ur => ur.Role)
+                      .WithMany(r => r.UserRoles)
+                      .HasForeignKey(ur => ur.RoleId)
+                      .IsRequired();
 
-        userRole.HasKey(usr => new { usr.UserId, usr.RoleId });
-        userRole.HasOne(usr => usr.Role)
-          .WithMany(r => r.UserRoles)
-          .HasForeignKey(ur => ur.UserId)
-          .IsRequired();
-      });
+            userRole.HasOne(ur => ur.User)
+                      .WithMany(r => r.UserRoles)
+                      .HasForeignKey(ur => ur.UserId)
+                      .IsRequired();
+          }
+      );
+
       modelBuilder.Entity<PalestranteEvento>()
-      .HasKey(PE => new { PE.EventoId, PE.PalestranteId });
+          .HasKey(PE => new { PE.EventoId, PE.PalestranteId });
     }
   }
 }
