@@ -141,6 +141,7 @@ export class EventosComponent implements OnInit {
     this.eventoService.getAllEventos()
       .subscribe((_eventos: Evento[]) => {
         this.eventos = _eventos
+        this.eventosFiltrados = _eventos
       }, error => {
         this.toastr.error(error)
       })
