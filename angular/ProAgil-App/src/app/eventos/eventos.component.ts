@@ -73,18 +73,19 @@ export class EventosComponent implements OnInit {
   salvarAlteracao(template: any) {
     if (this.registerForm.valid) {
       this.evento = Object.assign(this.evento && this.evento.id ? { id: this.evento.id } : {}, this.registerForm.value)
-      this.eventoService.postUpload(this.file).subscribe()
-      const nomeArquivo = this.evento.imagemURL.split('\\', 3)
-      this.evento.imagemURL = nomeArquivo[2]
-      this.eventoService[this.metodoSalvar](this.evento).subscribe(
-        () => {
-          template.hide()
-          this.getEventos()
-          this.toastr.success(`Evento ${this.evento.id ? 'atualizado' : 'criado'} com sucesso`);
-        }, error => {
-          this.toastr.error(`Erro ao  ${this.evento.id ? 'editar' : 'criar'} Evento`);
-        }
-      )
+      this.eventoService.postUpload(this.file).subscribe(() => {
+        const nomeArquivo = this.evento.imagemURL.split('\\', 3)
+        this.evento.imagemURL = nomeArquivo[2]
+        this.eventoService[this.metodoSalvar](this.evento).subscribe(
+          () => {
+            template.hide()
+            this.getEventos()
+            this.toastr.success(`Evento ${this.evento.id ? 'atualizado' : 'criado'} com sucesso`);
+          }, error => {
+            this.toastr.error(`Erro ao  ${this.evento.id ? 'editar' : 'criar'} Evento`);
+          }
+        )
+      })
     }
   }
 
