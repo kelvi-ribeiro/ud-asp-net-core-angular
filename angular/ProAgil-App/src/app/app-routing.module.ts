@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContatosComponent } from './contatos/contatos.component';
 import { UserComponent } from './user/user.component';
 import { RegistrationComponent } from './user/registration/registration.component';
+import { EventoEditComponent } from './eventos/evento-edit/evento-edit.component';
 import { LoginComponent } from './user/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 
@@ -18,6 +19,7 @@ const routes: Routes = [
     ]
   },
   { path: 'eventos', component: EventosComponent, canActivate: [AuthGuard] },
+  { path: 'evento/:id/edit', component: EventoEditComponent, canActivate: [AuthGuard] },
   { path: 'palestrantes', component: PalestrantesComponent, canActivate: [AuthGuard] },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'contatos', component: ContatosComponent, canActivate: [AuthGuard] },
