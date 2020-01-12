@@ -1,5 +1,7 @@
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -8,9 +10,9 @@ using ProAgil.WebAPI.DTOs;
 
 namespace ProAgil.WebAPI.Controllers
 {
-    [Route("api/[controller]")]
-    public class UserController : ControllerBase
-    {
+  [Route("api/[controller]")]
+  public class UserController : ControllerBase
+  {
     private readonly IConfiguration _config;
     public readonly SignInManager<User> _signInManager;
     public readonly IMapper _mapper;
@@ -23,7 +25,7 @@ namespace ProAgil.WebAPI.Controllers
             SignInManager<User> signInManager,
             IMapper mapper
             )
-        {
+    {
       _config = config;
       _userManager = userManager;
       _signInManager = signInManager;
@@ -31,16 +33,35 @@ namespace ProAgil.WebAPI.Controllers
     }
 
     [HttpGet("GetUser")]
-    public async Task<IActionResult> GetUser()
+    public async Task<IActionResult> GetUser(UserDto userDto)
     {
-        return Ok(new User());
+      return Ok(userDto);
     }
 
-     [HttpPost("Register")]
-    public async Task<IActionResult> Register(UserDto user)
+    [HttpPost("Register")]
+    [AllowAnonymous]
+    public async Task<IActionResult> Register(UserDto userDto)
     {
-        return Ok(new User());
-    }
+      try
+      {
+        var user = _mapper.Map<User>(userDto);
+        var result = await _userManager.CreateAsync(user, userDto.Password);
+        var userToReturn = _mapper.Map<UserDto>(userDto);
+        if (result.Succeeded)
+        {
+          return Created("GetUser", userToReturn);
+        }
 
+        return BadRequest(result.Errors);
+      }
+      catch (System.Exception)
+      {
+        return this
+          .StatusCode(
+            StatusCodes.Status500InternalServerError,
+            "Banco de Dados Falhou"
+            );
+      }
+    }
   }
 }
