@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { BsDropdownModule, TooltipModule, ModalModule, BsDatepickerModule, } from "ngx-bootstrap";
@@ -20,6 +20,7 @@ import { RegistrationComponent } from './user/registration/registration.componen
 
 
 import { DateTimeFormatTimePipe } from './helps/DateTimeFormatTime.pipe';
+import { AuthInterceptor } from './auth/auth.interceptor';
 
 @NgModule({
    declarations: [
@@ -48,7 +49,13 @@ import { DateTimeFormatTimePipe } from './helps/DateTimeFormatTime.pipe';
       FormsModule,
       ReactiveFormsModule
    ],
-   providers: [],
+   providers: [
+      {
+         provide: HTTP_INTERCEPTORS,
+         useClass: AuthInterceptor,
+         multi: true
+      }
+   ],
    bootstrap: [
       AppComponent
    ]
