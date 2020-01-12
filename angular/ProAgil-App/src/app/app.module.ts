@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { BsDropdownModule, TooltipModule, ModalModule, BsDatepickerModule, } from "ngx-bootstrap";
-
+import { BsDropdownModule, TooltipModule, ModalModule, BsDatepickerModule, TabsModule } from "ngx-bootstrap";
+import { NgxMaskModule } from "ngx-mask";
 import { EventosComponent } from './eventos/eventos.component';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -41,6 +41,8 @@ import { EventoEditComponent } from './eventos/evento-edit/evento-edit.component
    imports: [
       BrowserModule,
       BrowserAnimationsModule,
+      NgxMaskModule.forRoot(),
+      TabsModule.forRoot(),
       ToastrModule.forRoot(),
       BsDatepickerModule.forRoot(),
       BsDropdownModule.forRoot(),

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { EventoService } from 'src/app/services/evento.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { BsLocaleService } from 'ngx-bootstrap';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-evento-edit',
@@ -8,7 +12,15 @@ import { Component, OnInit } from '@angular/core';
 export class EventoEditComponent implements OnInit {
 
   titulo = 'Editar Evento'
-  constructor() { }
+  registerForm: FormGroup
+  constructor(
+    private eventoService: EventoService,
+    private fb: FormBuilder,
+    private localeService: BsLocaleService,
+    private toastr: ToastrService
+  ) {
+    this.localeService.use('pt-br')
+  }
 
   ngOnInit() {
   }
