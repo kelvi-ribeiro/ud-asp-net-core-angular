@@ -13,7 +13,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using ProAgil.Domain.Identity;
 using ProAgil.Repository;
@@ -95,6 +94,7 @@ namespace ProAgil.WebAPI
       }
 
       // app.UseHttpsRedirection();
+      app.UseAuthentication();
       app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
       app.UseRouting();
 
